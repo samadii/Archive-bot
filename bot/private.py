@@ -59,7 +59,7 @@ def enter_files(_, msg: types.Message):
                 downsts = msg.reply(Msg.downloading, True)  # send status-download message
                 stmsg= format(len(dir_work(uid)))
                 msg.reply(dir_work(uid), progress=up_progress,  # Change that i made
-                           progress_args=(stsmsg,))
+                           progress_args=(stmsg,))
 
                 msg.download(dir_work(uid))
                 downsts.delete()  # delete status-download message
